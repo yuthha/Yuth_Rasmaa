@@ -1,14 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {Navbar} from './navbar/navbar';
-import {HttpClientModule} from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, HttpClientModule],
+  standalone: true,
+  imports: [RouterOutlet, NavbarComponent, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-
+  // Your app logic here
 }
